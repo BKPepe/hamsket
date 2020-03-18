@@ -821,6 +821,14 @@ Ext.define('Hamsket.store.ServicesList', {
 			,js_unread: `let parseIntOrZero=e=>isNaN(parseInt(e))?0:parseInt(e),checkUnread=()=>{const e=document.querySelector(".msgCount");let n=0;e?n=parseIntOrZero(e.innerHTML.replace(/[() ]/gi,"")):["Messages","Calls","Voicemail"].forEach(function(e){const r=document.querySelector('gv-nav-tab[tooltip="+e+"] div[aria-label="Unread count"]');r&&(n+=parseIntOrZero(r.innerHTML))}),hamsket.updateBadge(n)};setInterval(checkUnread,3e3);;`
 		},
 		{
+			 id: 'googlecalendar'
+			 ,logo: 'googlecalendar.png'
+			 ,name: 'Google Calendar'
+			 ,description: 'Google Calendar is a time-management and scheduling calendar service developed by Google.'
+			 ,url: 'https://calendar.google.com/'
+			 ,type: 'messaging'
+		},
+		{
 			 id: 'sandstorm'
 			,logo: 'sandstorm.png'
 			,name: 'Sandstorm'
